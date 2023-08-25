@@ -34,6 +34,7 @@ def make_tree(path, level, connectors, index, parent=None):
                 connectors += "1"
         x = 0
         for entry in path.iterdir():
+            entry_num = sum(1 for _ in entry.glob("*"))
             if level != 1:
                 string = ""
                 for i, dig in enumerate(connectors):
@@ -43,20 +44,33 @@ def make_tree(path, level, connectors, index, parent=None):
                         string += "   "
                     else:
                         string += "│  "
-                if x != num - 1:
-                    string += "├──▶ "
+                if entry_num == 0:
+                    if x != num - 1:
+                        string += "├──▶ "
+                    else:
+                        string += "└──▶"
                 else:
-                    string += "└──▶ "
+                    if x != num - 1:
+                        string += "├──● "
+                    else:
+                        string += "└──●"
                 string += entry.name
                 string += f"   ({x + 1} / {num})"
                 print(string)
 
             else:
-                if x < num - 1:
-                    print("├──▶ " + entry.name + f"   ({x + 1} / {num})")
+                if entry_num == 0:
+                    if x < num - 1:
+                        print("├──▶ " + entry.name + f"   ({x + 1} / {num})")
 
+                    else:
+                        print("└──▶ " + entry.name + f"   ({x + 1} / {num})")
                 else:
-                    print("└──▶ " + entry.name + f"   ({x + 1} / {num})")
+                    if x < num - 1:
+                        print("├──● " + entry.name + f"   ({x + 1} / {num})")
+
+                    else:
+                        print("└──● " + entry.name + f"   ({x + 1} / {num})")
             x += 1
             make_tree(entry, level, connectors, x, path)
 
