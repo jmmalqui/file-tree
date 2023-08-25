@@ -11,7 +11,7 @@ target_dir = Path(args.path)
 
 
 if not target_dir.exists():
-    print("Doesn't exist")
+    print("Path does not exist.")
     raise SystemExit(1)
 
 
