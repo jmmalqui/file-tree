@@ -35,44 +35,28 @@ def make_tree(path, level, connectors, index, parent=None):
         x = 0
         for entry in path.iterdir():
             if level != 1:
+                string = ""
+                for i, dig in enumerate(connectors):
+                    if i == 0:
+                        continue
+                    if dig == "0":
+                        string += "   "
+                    else:
+                        string += "│  "
                 if x != num - 1:
-                    string = ""
-                    for i, dig in enumerate(connectors):
-                        if i == 0:
-                            continue
-                        if dig == "0":
-                            string += "   "
-                        else:
-                            string += "│  "
-                    else:
-                        string += "├──"
-                    string += entry.name
-
-                    string += f"   ({x + 1} / {num})"
-                    print(string)
-
+                    string += "├──▶ "
                 else:
-                    string = ""
-                    for i, dig in enumerate(connectors):
-                        if i == 0:
-                            continue
-                        if dig == "0":
-                            string += "   "
-                        else:
-                            string += "│  "
-                    else:
-                        string += "└──"
-                    string += entry.name
-
-                    string += f"   ({x + 1} / {num})"
-                    print(string)
+                    string += "└──▶ "
+                string += entry.name
+                string += f"   ({x + 1} / {num})"
+                print(string)
 
             else:
                 if x < num - 1:
-                    print("├──" + entry.name + f"   ({x + 1} / {num})")
+                    print("├──▶ " + entry.name + f"   ({x + 1} / {num})")
 
                 else:
-                    print("└──" + entry.name + f"   ({x + 1} / {num})")
+                    print("└──▶ " + entry.name + f"   ({x + 1} / {num})")
             x += 1
             make_tree(entry, level, connectors, x, path)
 
