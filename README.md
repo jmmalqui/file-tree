@@ -2,6 +2,12 @@
 
 Makes a File Tree out of a directory.
 
+Usage:
+
+```bash
+python file-tree.py [path]
+```
+
 Output:
 
 ```txt
