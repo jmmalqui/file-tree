@@ -33,7 +33,7 @@ def make_tree(path, level, connectors, index, parent=None):
             else:
                 connectors += "1"
         x = 0
-        for _, entry in enumerate(path.iterdir()):
+        for entry in path.iterdir():
             if level != 1:
                 if x != num - 1:
                     string = ""
