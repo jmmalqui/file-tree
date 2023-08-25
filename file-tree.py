@@ -47,8 +47,8 @@ def make_tree(path, level, connectors, index, parent=None):
                     else:
                         string += "├──"
                     string += entry.name
-                    string += " " + str(connectors)
-                    string += f"   {x + 1} / {num}"
+
+                    string += f"   ({x + 1} / {num})"
                     print(string)
 
                 else:
@@ -63,16 +63,16 @@ def make_tree(path, level, connectors, index, parent=None):
                     else:
                         string += "└──"
                     string += entry.name
-                    string += " " + str(connectors)
-                    string += f"   {x + 1} / {num}"
+
+                    string += f"   ({x + 1} / {num})"
                     print(string)
 
             else:
                 if x < num - 1:
-                    print("├──" + entry.name + str(connectors) + f"   {x + 1} / {num}")
+                    print("├──" + entry.name + f"   ({x + 1} / {num})")
 
                 else:
-                    print("└──" + entry.name + str(connectors) + f"   {x + 1} / {num}")
+                    print("└──" + entry.name + f"   ({x + 1} / {num})")
             x += 1
             make_tree(entry, level, connectors, x, path)
 

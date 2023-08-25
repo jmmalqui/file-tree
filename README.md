@@ -11,67 +11,87 @@ python file-tree.py [path]
 Output:
 
 ```txt
-└──file-tree   1   1 / 1
-   ├──.git 10   1 / 5
-   │  ├──COMMIT_EDITMSG 101   1 / 12
-   │  ├──config 101   2 / 12
-   │  ├──description 101   3 / 12
-   │  ├──FETCH_HEAD 101   4 / 12
-   │  ├──HEAD 101   5 / 12
-   │  ├──hooks 101   6 / 12
-   │  │  ├──applypatch-msg.sample 1011   1 / 14
-   │  │  ├──commit-msg.sample 1011   2 / 14
-   │  │  ├──fsmonitor-watchman.sample 1011   3 / 14
-   │  │  ├──post-update.sample 1011   4 / 14
-   │  │  ├──pre-applypatch.sample 1011   5 / 14
-   │  │  ├──pre-commit.sample 1011   6 / 14
-   │  │  ├──pre-merge-commit.sample 1011   7 / 14
-   │  │  ├──pre-push.sample 1011   8 / 14
-   │  │  ├──pre-rebase.sample 1011   9 / 14
-   │  │  ├──pre-receive.sample 1011   10 / 14
-   │  │  ├──prepare-commit-msg.sample 1011   11 / 14
-   │  │  ├──push-to-checkout.sample 1011   12 / 14
-   │  │  ├──sendemail-validate.sample 1011   13 / 14
-   │  │  └──update.sample 1011   14 / 14
-   │  ├──index 101   7 / 12
-   │  ├──info 101   8 / 12
-   │  │  └──exclude 1011   1 / 1
-   │  ├──logs 101   9 / 12
-   │  │  ├──HEAD 1011   1 / 2
-   │  │  └──refs 1011   2 / 2
-   │  │     ├──heads 10110   1 / 2
-   │  │     │  └──main 101101   1 / 1
-   │  │     └──remotes 10110   2 / 2
-   │  │        └──origin 101100   1 / 1
-   │  │           └──main 1011000   1 / 1
-   │  ├──objects 101   10 / 12
-   │  │  ├──0d 1011   1 / 9
-   │  │  │  └──c7b4b001b8af6250cc8a88aec74562fcd1bb27 10111   1 / 1
-   │  │  ├──21 1011   2 / 9
-   │  │  │  └──a83e2dd6fa24b7e5a2eefb70bf8b2fd547825a 10111   1 / 1
-   │  │  ├──5a 1011   3 / 9
-   │  │  │  └──53d9d5a1c106665f17523d6ec992438a59066a 10111   1 / 1
-   │  │  ├──c7 1011   4 / 9
-   │  │  │  └──97acc8df9f8ed4528a504e3f2ee5de61209ab9 10111   1 / 1
-   │  │  ├──d3 1011   5 / 9
-   │  │  │  └──8aa2967d6fae9f7f0da13a8633e04634796993 10111   1 / 1
-   │  │  ├──f6 1011   6 / 9
-   │  │  │  └──e59c3360f625ad21b4a6c0e1468201a39115f2 10111   1 / 1
-   │  │  ├──fe 1011   7 / 9
-   │  │  │  └──fae64ddb91987dce8f9b03780568902f711c44 10111   1 / 1
-   │  │  ├──info 1011   8 / 9
-   │  │  └──pack 1011   9 / 9
-   │  ├──ORIG_HEAD 101   11 / 12
-   │  └──refs 101   12 / 12
-   │     ├──heads 1010   1 / 3
-   │     │  └──main 10101   1 / 1
-   │     ├──remotes 1010   2 / 3
-   │     │  └──origin 10101   1 / 1
-   │     │     └──main 101010   1 / 1
-   │     └──tags 1010   3 / 3
-   ├──.gitignore 10   2 / 5
-   ├──.vscode 10   3 / 5
-   │  └──settings.json 101   1 / 1
-   ├──file-tree.py 10   4 / 5
-   └──README.md 10   5 / 5
+└──file-tree   (1 / 1)
+   ├──.git   (1 / 5)
+   │  ├──COMMIT_EDITMSG   (1 / 12)
+   │  ├──config   (2 / 12)
+   │  ├──description   (3 / 12)
+   │  ├──FETCH_HEAD   (4 / 12)
+   │  ├──HEAD   (5 / 12)
+   │  ├──hooks   (6 / 12)
+   │  │  ├──applypatch-msg.sample   (1 / 14)
+   │  │  ├──commit-msg.sample   (2 / 14)
+   │  │  ├──fsmonitor-watchman.sample   (3 / 14)
+   │  │  ├──post-update.sample   (4 / 14)
+   │  │  ├──pre-applypatch.sample   (5 / 14)
+   │  │  ├──pre-commit.sample   (6 / 14)
+   │  │  ├──pre-merge-commit.sample   (7 / 14)
+   │  │  ├──pre-push.sample   (8 / 14)
+   │  │  ├──pre-rebase.sample   (9 / 14)
+   │  │  ├──pre-receive.sample   (10 / 14)
+   │  │  ├──prepare-commit-msg.sample   (11 / 14)
+   │  │  ├──push-to-checkout.sample   (12 / 14)
+   │  │  ├──sendemail-validate.sample   (13 / 14)
+   │  │  └──update.sample   (14 / 14)
+   │  ├──index   (7 / 12)
+   │  ├──info   (8 / 12)
+   │  │  └──exclude   (1 / 1)
+   │  ├──logs   (9 / 12)
+   │  │  ├──HEAD   (1 / 2)
+   │  │  └──refs   (2 / 2)
+   │  │     ├──heads   (1 / 2)
+   │  │     │  └──main   (1 / 1)
+   │  │     └──remotes   (2 / 2)
+   │  │        └──origin   (1 / 1)
+   │  │           └──main   (1 / 1)
+   │  ├──objects   (10 / 12)
+   │  │  ├──0d   (1 / 19)
+   │  │  │  └──c7b4b001b8af6250cc8a88aec74562fcd1bb27   (1 / 1)
+   │  │  ├──11   (2 / 19)
+   │  │  │  └──6462c642a2298f9157564349d0b92cc09a44ac   (1 / 1)
+   │  │  ├──1f   (3 / 19)
+   │  │  │  └──4bde0478d683d65a7d6ba0644400830f48bde2   (1 / 1)
+   │  │  ├──21   (4 / 19)
+   │  │  │  └──a83e2dd6fa24b7e5a2eefb70bf8b2fd547825a   (1 / 1)
+   │  │  ├──5a   (5 / 19)
+   │  │  │  └──53d9d5a1c106665f17523d6ec992438a59066a   (1 / 1)
+   │  │  ├──74   (6 / 19)
+   │  │  │  └──a3b4212856ce730c5ad73cb771501a95b9e1ad   (1 / 1)
+   │  │  ├──77   (7 / 19)
+   │  │  │  └──14874cbedeecd19578d1819c71d1385fe65fad   (1 / 1)
+   │  │  ├──7f   (8 / 19)
+   │  │  │  └──400441c0683449da4f2f4d31cc6106f301f279   (1 / 1)
+   │  │  ├──81   (9 / 19)
+   │  │  │  └──c1ae2065612a5d2cd6957b4ad074f404e025a3   (1 / 1)
+   │  │  ├──9e   (10 / 19)
+   │  │  │  └──46ed738255bc36cf4bf3e56b05c5e078182783   (1 / 1)
+   │  │  ├──c0   (11 / 19)
+   │  │  │  └──cca83a8e5488fc209e7035a413f857080a7613   (1 / 1)
+   │  │  ├──c7   (12 / 19)
+   │  │  │  └──97acc8df9f8ed4528a504e3f2ee5de61209ab9   (1 / 1)
+   │  │  ├──d3   (13 / 19)
+   │  │  │  └──8aa2967d6fae9f7f0da13a8633e04634796993   (1 / 1)
+   │  │  ├──d6   (14 / 19)
+   │  │  │  └──e244a4eb3083340f4dad3065ca51b1575bb7cf   (1 / 1)
+   │  │  ├──db   (15 / 19)
+   │  │  │  └──d0bbb7bcd7923b12b5fcb16c44850ce69119ee   (1 / 1)
+   │  │  ├──f6   (16 / 19)
+   │  │  │  └──e59c3360f625ad21b4a6c0e1468201a39115f2   (1 / 1)
+   │  │  ├──fe   (17 / 19)
+   │  │  │  └──fae64ddb91987dce8f9b03780568902f711c44   (1 / 1)
+   │  │  ├──info   (18 / 19)
+   │  │  └──pack   (19 / 19)
+   │  ├──ORIG_HEAD   (11 / 12)
+   │  └──refs   (12 / 12)
+   │     ├──heads   (1 / 3)
+   │     │  └──main   (1 / 1)
+   │     ├──remotes   (2 / 3)
+   │     │  └──origin   (1 / 1)
+   │     │     └──main   (1 / 1)
+   │     └──tags   (3 / 3)
+   ├──.gitignore   (2 / 5)
+   ├──.vscode   (3 / 5)
+   │  └──settings.json   (1 / 1)
+   ├──file-tree.py   (4 / 5)
+   └──README.md   (5 / 5)
 ```
