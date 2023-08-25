@@ -1,6 +1,6 @@
 # File-Tree
 
-Makes a Tree File out of a directory.
+Makes a File Tree out of a directory.
 
 Output:
 
